@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const PopularMovies = ({ popularMovies }: { popularMovies: any }) => {
+const UpcomingMovies = ({ upcomingMovies }: { upcomingMovies: any }) => {
   return (
     <div className="flex flex-col mb-6">
       <div className="flex justify-between items-center mt-4">
-        <h1 className="text-2xl font-medium">Popular Movies</h1>
+        <h1 className="text-2xl font-medium">Upcoming Movies</h1>
         <Link
           href="/movies/popular"
           className="py-2 px-5 bg-slate-800 text-md font-normal text-white"
@@ -16,7 +16,7 @@ const PopularMovies = ({ popularMovies }: { popularMovies: any }) => {
         </Link>
       </div>
       <div className="grid grid-cols-4 mt-4 gap-4">
-        {popularMovies.results.slice(0, 4).map((movie: any) => (
+        {upcomingMovies.results.slice(0, 4).map((movie: any) => (
           <Link
             href={`/movie/${movie?.id}`}
             key={movie.id}
@@ -54,4 +54,4 @@ const PopularMovies = ({ popularMovies }: { popularMovies: any }) => {
   );
 };
 
-export default PopularMovies;
+export default UpcomingMovies;

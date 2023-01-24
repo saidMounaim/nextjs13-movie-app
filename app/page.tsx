@@ -1,4 +1,6 @@
 import PopularMovies from "@/components/PopularMovies";
+import TopRatedMovies from "@/components/TopRatedMovies";
+import UpcomingMovies from "@/components/UpcomingMovies";
 
 async function getMovies(type: string) {
   const res = await fetch(
@@ -15,7 +17,9 @@ export default async function Home() {
   return (
     <main className="mt-5 flex flex-col">
       <div className="w-[1300px] max-w-full px-4 mx-auto">
+        <UpcomingMovies upcomingMovies={upcomingMovies} />
         <PopularMovies popularMovies={popularMovies} />
+        <TopRatedMovies topRatedMovies={topRatedMovies} />
       </div>
     </main>
   );
