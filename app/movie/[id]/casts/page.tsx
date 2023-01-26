@@ -26,7 +26,7 @@ const page = async ({ params }: IParamsCasts) => {
           <h1 className="text-2xl font-medium">All Cast</h1>
         </div>
         <div className="grid grid-cols-4 mt-4 gap-4">
-          {movieCast?.cast.map((cast: ICastCard) => (
+          {movieCast?.cast?.map((cast: ICastCard) => (
             <CastCard key={cast?.id} cast={cast} />
           ))}
         </div>

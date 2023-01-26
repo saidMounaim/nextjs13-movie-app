@@ -10,13 +10,9 @@ export interface IMovieCard {
   vote_average: number;
 }
 
-const MovieCard = ({ movie, key }: { movie: IMovieCard; key: number }) => {
+const MovieCard = ({ movie }: { movie: IMovieCard }) => {
   return (
-    <Link
-      href={`/movie/${movie?.id}`}
-      key={key}
-      className="w-full flex flex-col"
-    >
+    <Link href={`/movie/${movie?.id}`} className="w-full flex flex-col">
       <div className="w-full h-[400px] relative">
         <Image
           src={

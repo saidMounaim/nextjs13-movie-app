@@ -86,7 +86,7 @@ const page = async ({ params }: IParamsMovieDetails) => {
                   </>
                 )}
                 <h5 className="text-md font-medium">
-                  {movie?.genres.map((genre: any) => genre?.name).join(", ")}
+                  {movie?.genres?.map((genre: any) => genre?.name).join(", ")}
                 </h5>
               </div>
               <div className="flex flex-col mt-5">
@@ -96,7 +96,7 @@ const page = async ({ params }: IParamsMovieDetails) => {
           </div>
         </div>
       </div>
-      <div className="w-[1200] max-w-full px-4 mx-auto">
+      <div className="w-[1200px] max-w-full px-4 mx-auto">
         <div className="flex flex-col mb-6 mt-6">
           <div className="flex justify-between items-center mt-4">
             <h1 className="text-2xl font-medium">Top Cast</h1>
@@ -108,7 +108,7 @@ const page = async ({ params }: IParamsMovieDetails) => {
             </Link>
           </div>
           <div className="grid grid-cols-4 mt-4 gap-4">
-            {movieCast?.cast.slice(0, 4).map((cast: ICastCard) => (
+            {movieCast?.cast?.slice(0, 4).map((cast: ICastCard) => (
               <CastCard key={cast?.id} cast={cast} />
             ))}
           </div>
@@ -124,7 +124,7 @@ const page = async ({ params }: IParamsMovieDetails) => {
             </Link>
           </div>
           <div className="grid grid-cols-4 mt-4 gap-4">
-            {recommendations?.results.slice(0, 4).map((movie: IMovieCard) => (
+            {recommendations?.results?.slice(0, 4).map((movie: IMovieCard) => (
               <MovieCard key={movie?.id} movie={movie} />
             ))}
           </div>
