@@ -108,7 +108,7 @@ const page = async ({ params }: IParamsMovieDetails) => {
             </Link>
           </div>
           <div className="grid grid-cols-4 mt-4 gap-4">
-            {movieCast.cast.slice(0, 4).map((cast: ICastCard) => (
+            {movieCast?.cast.slice(0, 4).map((cast: ICastCard) => (
               <CastCard key={cast?.id} cast={cast} />
             ))}
           </div>
@@ -124,7 +124,7 @@ const page = async ({ params }: IParamsMovieDetails) => {
             </Link>
           </div>
           <div className="grid grid-cols-4 mt-4 gap-4">
-            {recommendations.results.slice(0, 4).map((movie: IMovieCard) => (
+            {recommendations?.results.slice(0, 4).map((movie: IMovieCard) => (
               <MovieCard key={movie?.id} movie={movie} />
             ))}
           </div>

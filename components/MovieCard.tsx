@@ -14,7 +14,7 @@ const MovieCard = ({ movie, key }: { movie: IMovieCard; key: number }) => {
   return (
     <Link
       href={`/movie/${movie?.id}`}
-      key={movie.id}
+      key={key}
       className="w-full flex flex-col"
     >
       <div className="w-full h-[400px] relative">

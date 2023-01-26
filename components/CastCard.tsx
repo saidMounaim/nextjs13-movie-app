@@ -11,7 +11,7 @@ export interface ICastCard {
 
 const CastCard = ({ cast, key }: { cast: ICastCard; key: number }) => {
   return (
-    <div key={cast.id} className="w-full flex flex-col">
+    <div key={key} className="w-full flex flex-col">
       <div className="w-full h-[400px] relative">
         <Image
           src={
