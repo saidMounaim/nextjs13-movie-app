@@ -26,7 +26,7 @@ const page = async ({ params }: IParamsRecommendations) => {
         </div>
         <div className="grid grid-cols-4 mt-4 gap-4">
           {movieRecommendations.results.map((movie: IMovieCard) => (
-            <MovieCard movie={movie} />
+            <MovieCard key={movie?.id} movie={movie} />
           ))}
         </div>
       </div>

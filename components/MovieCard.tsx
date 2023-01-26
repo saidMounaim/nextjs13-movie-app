@@ -10,7 +10,7 @@ export interface IMovieCard {
   vote_average: number;
 }
 
-const MovieCard = ({ movie }: { movie: IMovieCard }) => {
+const MovieCard = ({ movie, key }: { movie: IMovieCard; key: number }) => {
   return (
     <Link
       href={`/movie/${movie?.id}`}

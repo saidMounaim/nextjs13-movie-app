@@ -28,7 +28,7 @@ const page = async ({ searchParams }: Props) => {
         </div>
         <div className="grid grid-cols-4 mt-4 gap-4">
           {popularMovies.results.map((movie: IMovieCard) => (
-            <MovieCard movie={movie} />
+            <MovieCard key={movie?.id} movie={movie} />
           ))}
         </div>
         <Paginate

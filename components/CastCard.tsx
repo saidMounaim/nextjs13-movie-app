@@ -9,7 +9,7 @@ export interface ICastCard {
   profile_path: string;
 }
 
-const CastCard = ({ cast }: { cast: ICastCard }) => {
+const CastCard = ({ cast, key }: { cast: ICastCard; key: number }) => {
   return (
     <div key={cast.id} className="w-full flex flex-col">
       <div className="w-full h-[400px] relative">
