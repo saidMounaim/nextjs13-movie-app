@@ -1,6 +1,6 @@
 # Movie App
 
-A movie app that allows users to view and search for movies, and see details of each movie. This app is still in progress and is built using Next.js 13, TailwindCSS, TypeScript, and TheMovieDB API.
+A movie app that allows users to view and search for movies, and see details of each movie. This app built using Next.js 13, TailwindCSS, TypeScript, and TheMovieDB API.
 
 ## Getting Started
 
